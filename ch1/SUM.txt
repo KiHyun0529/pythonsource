@@ -1,62 +1,202 @@
-# python 언어
-# 문법이 쉬워 빠르게 배울 수 있음
-# 간결함
-# Life is too short, You need python
+ python 언어
+ 문법이 쉬워 빠르게 배울 수 있음
+ 간결함
+ Life is too short, You need python
 
-# 웹프로그래밍
-# 인공지능
-# 머신러닝
-# 데이터분석
-# 데이터베이스프로그래밍
+ 웹프로그래밍
+ 인공지능
+ 머신러닝
+ 데이터분석
+ 데이터베이스프로그래밍
 
-# 가장 간단한 방법
-# 1. 폴더 생성
-# uv init 폴더명
-# 2. cd 생성된 폴더로 들어가기
-# cd 폴더명
-# 3. 생성된 폴더에서 가상환경 구축하기 버전 3.14
-# uv venv --python 3.14
+ 가장 간단한 방법
+ 1. 폴더 생성
+ uv init 폴더명
+ 2. cd 생성된 폴더로 들어가기
+ cd 폴더명
+ 3. 생성된 폴더에서 가상환경 구축하기 버전 3.14
+ uv venv --python 3.14
 
-# 프로젝트 단위로 생성하는 방법
-# source> uv init 폴더명 --python 3.14
-#	> cd 생성된폴더명
-#	> uv python pin 3.14
-#	> uv venv
+ 프로젝트 단위로 생성하는 방법
+ source> uv init 폴더명 --python 3.14
+	> cd 생성된폴더명
+	> uv python pin 3.14
+	> uv venv
+    
+    uv = 파이썬 프로젝트를 관리하는 도구
+    venv = 가상환경을 만드는 기능
 
 
-# init 생성하기
-# venv 가상환경 만들기
-# pin 3.14 버전 고정
-# cd(change directory)
-# cd 폴더명 #폴더명으로 이동한다
-# 현재경로-> cd C:\source\test
-# cd C:\source에서 있으면 cd\test
-# cd.. #상위폴더로 이동
+init 생성하기
+venv 가상환경 만들기
+pin 3.14 버전 고정
+cd(change directory)
+cd 폴더명 #폴더명으로 이동한다
+현재경로-> cd C:\source\test
+cd C:\source에서 있으면 cd\test
+cd.. #상위폴더로 이동
 
-# python
-# jupitor
-# black format
-# material icon theme
+python
+jupitor
+black format
+material icon theme
 
-# git : 소프트웨어 프로그램
-# 소스 관리 도와줌
-# 어떤 폴더나 파일을 관리 할 것인지 알려주기 : gitignore 작성
+git : 소프트웨어 프로그램
+소스 관리 도와줌
+어떤 폴더나 파일을 관리 할 것인지 알려주기 : gitignore 작성
 
-# 함수 뒤에만 ""
-# ex) print / len 사용안함
+함수 뒤에만 ""
+ex) print / len 사용안함
 
-# ========================
-# int : 숫자형
-# str : 문자열
-# ==========자료형==========
-# list : 리스트[수정가능]
-# dict : 딕셔너리[수정가능]
-# t : 튜플[수정불가] / 한개여도 뒤에 , 필수
+========================
+# int : 정수(Integer)를 저장하는 자료형
+10, -3, 0
 
-# append() : 현재 리스트의 뒤에 추가
-# sort() : 오름차순 정렬(원본 변경)
-# sort(reverse=True) : 내림차순 정렬(원본 변경)
-# remove() : 제거
-# pop() : 맨 마지막 요소를 리턴하고 그 요소는 삭제
-# extend([x]) : 원래의 리스트에 x 리스트 추가
-# iterable : 하나씩 꺼내올 수 있는 구조
+# float : 실수(Floating Point)를 저장하는 자료형
+3.14, 0.5
+
+# str : 문자(문자열)를 저장하는 자료형
+"Python"
+
+# boll : 참(True) 또는 거짓(False)
+True, False
+
+==========자료형==========
+# list : 여러 개의 데이터를 순서대로 저장, 수정 가능
+[1, 2, 3], ['사과', '바나나']
+
+# dict : 키(Key) : 값(Value) 형태로 데이터를 저장
+{"name":"홍길동", "age":20}
+
+# t : 리스트와 비슷하지만 수정 불가능
+(1, 2, 3)
+
+# set : 중복을 허용하지 않는 데이터 모음, 순서 없음
+{1, 2, 3}
+
+자료형	순서 있음	수정 가능	중복 허용
+list	    O	       O	     O
+str	        O	       X	     O
+tuple	    O	       X	     O
+dict	O (Python 3.7+)	O	키(Key)는 중복 X
+set	        X	        O	     X
+
+==========append() : 리스트의 맨 뒤에 요소 1개 추가==========
+a = [1,2]
+a.append([3,4])
+
+print(a)
+[1,2,[3,4]]
+
+==========extend() : 리스트에 여러 개의 요소 추가==========
+a = [1,2]
+a.extend([3,4])
+
+print(a)
+[1,2,3,4]
+
+==========sort() : 오름차순 정렬(원본 변경)==========
+num = [5,2,8,1]
+
+num.sort()
+
+print(num)
+[1,2,5,8]
+==========sort(reverse=True) : 내림차순 정렬(원본 변경)==========
+num = [5,2,8,1]
+
+num.sort(reverse=True)
+
+print(num)
+[8,5,2,1]
+
+==========remove() : 원하는 값을 삭제==========
+fruits = ['사과','바나나','딸기']
+
+fruits.remove('바나나')
+
+print(fruits)
+['사과','딸기']
+
+==========pop() : 맨 마지막 요소를 리턴하고 그 요소는 삭제==========
+fruits = ['사과','바나나','딸기']
+
+x = fruits.pop()
+
+print(x)
+print(fruits)
+딸기
+['사과','바나나']
+원하는 위치도 가능 fruits.pop(0)
+
+==========clear() : 리스트 비우기==========
+fruits = ['사과','바나나']
+
+fruits.clear()
+
+print(fruits)
+[]
+
+==========del : 삭제==========
+리스트 전체 삭제
+del fruits
+
+특정 위치 삭제
+fruits = ['사과','바나나','딸기']
+
+del fruits[1]
+
+print(fruits)
+['사과','딸기']
+
+==========in/not in : 포함되어 있는지 확인==========
+fruits = ['사과','바나나','딸기']
+
+print('딸기' in fruits)
+True
+
+print('수박' not in fruits)
+True
+
+==========count() : 몇 개 있는지==========
+num = [1,2,2,3,2]
+
+print(num.count(2))
+3
+
+==========find() : 문자열에서 위치 찾기==========
+text = "python"
+
+print(text.find("t"))
+2
+
+못찾을경우
+-1
+
+==========len() : 길이구하기==========
+fruits = ['사과','바나나','딸기']
+
+print(len(fruits))
+3
+
+==========type() : 자료형 확인==========
+a = [1,2,3]
+
+print(type(a))
+<class 'list'>
+
+==========replace(바꾸고 싶은 문자,바꿀 문자) : 문자열의 특정 문자를 다른 문자로 변경==========
+replace(old, new, count) => 앞에서부터 count개만 변경
+text = "I like Python"
+
+text = "apple apple apple"
+
+print(text.replace("apple", "banana"))
+banana banana banana
+
+==========f-string : 숫자 자리 맞추기==========
+
+
+iterable?
+
+enumerate : 차례로 가지고 나올 수 있는 구조일 때
