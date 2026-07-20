@@ -200,3 +200,7 @@ banana banana banana
 iterable?
 
 enumerate : 차례로 가지고 나올 수 있는 구조일 때
+
+args = arguments(가변 매개변수) => 튜플
+
+kwargs = keyword arguments(가변 매개변수) => 딕셔너리
